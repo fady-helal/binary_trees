@@ -2,14 +2,14 @@
 
 /**
  * binary_tree_delete - Deletes a binary tree.
- * @root: A pointer to the root node of the tree to delete.
+ * @tree: A pointer to the root node of the tree to delete.
  */
-void binary_tree_delete(binary_tree_t *root)
+void binary_tree_delete(binary_tree_t *tree)
 {
-	if (root != NULL)
+	if (tree != NULL)
 	{
-		binary_tree_delete(root->left);
-		binary_tree_delete(root->right);
-		free(root);
+		binary_tree_delete(tree->left);
+		binary_tree_delete(tree->right);
+		free(tree);
 	}
 }
